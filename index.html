@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Header  -->
+    <header>
+        <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+        <h1>HTML/CSS Quiz</h1>
+        <nav>
+            <ul>
+                The accesskey attribute accepts a space-separated list of access keys.
+                <li><a accesskey="a" href="#student-info">INFO</a></li>
+                <li><a accesskey="b" href="#html-questions">HTML</a></li>
+                <li><a accesskey="c" href="#css-questions">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+
+            <!--Section One: Student Info -->
+            <section aria-labelledby="student-info" role="region">
+                <h2 id="student-info">Student Info</h2>
+                <div class="info">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="info">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="info">
+                    <label for="dob">D.O.B.<span class="sr-only">(Date of Birth)</span>: </label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+            </section>
+
+
+            <!--Section Two:  HTML Questions -->
+            <section aria-labelledby="html-questions" role="region">
+                <h2 id="html-questions">HTML Questions</h2>
+
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset name="mcq" class="question">
+                        <legend>
+                            The 'title' element is used to title the web page.
+                        </legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" value="True" name="mcq" id="q1-a1">
+                                    True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" value="False" name="mcq" id="q1-a2">
+                                    False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset name="mcq" class="question">
+                        <legend>
+                            The 'fieldset' is used to caption a particular section.
+                        </legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input type="radio" value="True" name="mcqq" id="q2-a1">
+                                    True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2">
+                                    <input type="radio" value="False" name="mcqq" id="q2-a2">
+                                    False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+
+            <!--Section Three:  CSS Questions -->
+            <section aria-labelledby="css-questions" role="region">
+                <h2 id="css-questions">CSS Questions</h2>
+
+                <div class="formrow">
+                    <div class="question-block">
+                        <label for="qb_one">
+                            The 'margin' property is used to put space between border and content.
+                        </label>
+                    </div>
+                    <div class="answer">
+                        <select name="answer" id="qb_one" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="qb_two">
+                            Do you have any questions?
+                        </label>
+                    </div>
+
+                    <div class="answer">
+                        <textarea id="qb_two" rows="5" cols="24" name="textarea"
+                            placeholder="Do you?..."></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <input type="submit" value="Send" name="submit" id="submit"> -->
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+            San Francisco<br />
+            California<br />
+            USA
+        </address>
+    </footer>
+</body>
+
+</html>
